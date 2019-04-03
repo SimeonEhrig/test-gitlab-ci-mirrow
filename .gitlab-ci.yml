@@ -3,13 +3,13 @@ gcc-cuda8:
   before_script:
     - apt-get update
     - apt-get install -y g++ git cmake make python3
-    - mkdir build
-    - cd build
-    - cmake ..
-    - make -j
+    #- mkdir build
+    #- cd build
+    #- cmake ..
+    #- make -j
   script:
     - nvidia-smi
-    - ./test_vec_copy
+    #- ./test_vec_copy
   tags:
     - cuda
     - intel

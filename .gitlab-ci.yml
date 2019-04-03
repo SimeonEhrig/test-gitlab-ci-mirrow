@@ -1,0 +1,15 @@
+gcc-cuda8:
+  image: nvidia/cuda:8.0-devel-ubuntu16.04 
+  before_script:
+    - apt-get update
+    - apt-get install -y g++ git cmake make
+    - mkdir build
+    - cd build
+    - cmake ..
+    - make -j
+  script:
+    - nvidia-smi
+    - ./test_vec_copy
+  tags:
+    - cuda
+    - intel

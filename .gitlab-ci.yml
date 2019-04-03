@@ -2,7 +2,7 @@ gcc-cuda8:
   image: nvidia/cuda:8.0-devel-ubuntu16.04 
   before_script:
     - apt-get update
-    - apt-get install -y g++ git cmake make
+    - apt-get install -y g++ git cmake make python3
     - mkdir build
     - cd build
     - cmake ..
